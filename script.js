@@ -35,20 +35,20 @@ const sampleProducts = [
     {
         id: 1,
         title: 'iPhone 15 Pro',
-        description: 'Новейший смартфон с титановым корпусом и чипом A17 Pro',
+        description: 'Новейший смартфон с титановым корпусом',
         price: 89990,
         oldPrice: 99990,
-        image: 'https://via.placeholder.com/300x200/667eea/ffffff?text=iPhone+15+Pro',
+        image: 'https://images.unsplash.com/photo-1592750475338-74b7b21085ab?w=300&h=200&fit=crop',
         category: 'electronics',
         inStock: true
     },
     {
         id: 2,
         title: 'MacBook Air M2',
-        description: 'Ультратонкий ноутбук с чипом M2 и дисплеем Liquid Retina',
+        description: 'Ультратонкий ноутбук с чипом M2',
         price: 119990,
         oldPrice: 139990,
-        image: 'https://via.placeholder.com/300x200/764ba2/ffffff?text=MacBook+Air+M2',
+        image: 'https://images.unsplash.com/photo-1517336714731-489689fd1ca8?w=300&h=200&fit=crop',
         category: 'electronics',
         inStock: true
     },
@@ -58,57 +58,7 @@ const sampleProducts = [
         description: 'Удобные кроссовки с максимальной амортизацией',
         price: 12990,
         oldPrice: 15990,
-        image: 'https://via.placeholder.com/300x200/ff6b6b/ffffff?text=Nike+Air+Max',
-        category: 'sports',
-        inStock: true
-    },
-    {
-        id: 4,
-        title: 'Джинсы Levi\'s 501',
-        description: 'Классические прямые джинсы из денима премиум качества',
-        price: 5990,
-        oldPrice: 7990,
-        image: 'https://via.placeholder.com/300x200/4ecdc4/ffffff?text=Levi\'s+501',
-        category: 'clothing',
-        inStock: true
-    },
-    {
-        id: 5,
-        title: 'Кофемашина De\'Longhi',
-        description: 'Автоматическая кофемашина для приготовления эспрессо и капучино',
-        price: 45990,
-        oldPrice: 52990,
-        image: 'https://via.placeholder.com/300x200/45b7d1/ffffff?text=Coffee+Machine',
-        category: 'home',
-        inStock: true
-    },
-    {
-        id: 6,
-        title: 'Sony WH-1000XM5',
-        description: 'Беспроводные наушники с активным шумоподавлением',
-        price: 29990,
-        oldPrice: 34990,
-        image: 'https://via.placeholder.com/300x200/96ceb4/ffffff?text=Sony+Headphones',
-        category: 'electronics',
-        inStock: true
-    },
-    {
-        id: 7,
-        title: 'Куртка The North Face',
-        description: 'Теплая зимняя куртка с технологией ThermoBall',
-        price: 15990,
-        oldPrice: 19990,
-        image: 'https://via.placeholder.com/300x200/feca57/ffffff?text=North+Face+Jacket',
-        category: 'clothing',
-        inStock: true
-    },
-    {
-        id: 8,
-        title: 'Гантели 20кг',
-        description: 'Разборные гантели для домашних тренировок',
-        price: 8990,
-        oldPrice: 10990,
-        image: 'https://via.placeholder.com/300x200/ff9ff3/ffffff?text=Dumbbells',
+        image: 'https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=300&h=200&fit=crop',
         category: 'sports',
         inStock: true
     }
@@ -428,3 +378,4 @@ function closeModal(modal) {
 
 // Initialize the app when DOM is loaded
 document.addEventListener('DOMContentLoaded', init);
+
