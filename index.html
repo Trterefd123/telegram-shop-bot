@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Каталог товаров</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://telegram.org/js/telegram-web-app.js"></script>
+</head>
+<body>
+    <div class="app">
+        <!-- Header -->
+        <header class="header">
+            <div class="header-content">
+                <h1 class="logo">🛍️ Магазин</h1>
+                <div class="header-actions">
+                    <button class="search-btn" id="searchBtn">🔍</button>
+                    <button class="cart-btn" id="cartBtn">
+                        🛒 <span class="cart-count" id="cartCount">0</span>
+                    </button>
+                </div>
+            </div>
+        </header>
+
+        <!-- Search Bar -->
+        <div class="search-container" id="searchContainer" style="display: none;">
+            <input type="text" id="searchInput" placeholder="Поиск товаров..." class="search-input">
+            <button class="search-close" id="searchClose">✕</button>
+        </div>
+
+        <!-- Categories -->
+        <nav class="categories">
+            <button class="category-btn active" data-category="all">Все</button>
+            <button class="category-btn" data-category="electronics">Электроника</button>
+            <button class="category-btn" data-category="clothing">Одежда</button>
+            <button class="category-btn" data-category="home">Дом</button>
+            <button class="category-btn" data-category="sports">Спорт</button>
+        </nav>
+
+        <!-- Products Grid -->
+        <main class="main-content">
+            <div class="products-grid" id="productsGrid">
+                <!-- Products will be loaded here -->
+            </div>
+        </main>
+
+        <!-- Product Modal -->
+        <div class="modal" id="productModal">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h2 id="modalTitle"></h2>
+                    <button class="modal-close" id="modalClose">✕</button>
+                </div>
+                <div class="modal-body">
+                    <img id="modalImage" src="" alt="" class="modal-image">
+                    <div class="modal-info">
+                        <p id="modalDescription"></p>
+                        <div class="price-section">
+                            <span class="price" id="modalPrice"></span>
+                            <span class="old-price" id="modalOldPrice"></span>
+                        </div>
+                        <div class="quantity-controls">
+                            <button class="quantity-btn" id="quantityMinus">-</button>
+                            <span class="quantity" id="quantity">1</span>
+                            <button class="quantity-btn" id="quantityPlus">+</button>
+                        </div>
+                        <button class="add-to-cart-btn" id="addToCartBtn">Добавить в корзину</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Cart Modal -->
+        <div class="modal" id="cartModal">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h2>Корзина</h2>
+                    <button class="modal-close" id="cartClose">✕</button>
+                </div>
+                <div class="modal-body">
+                    <div class="cart-items" id="cartItems">
+                        <!-- Cart items will be loaded here -->
+                    </div>
+                    <div class="cart-footer">
+                        <div class="cart-total">
+                            <span>Итого: <span id="cartTotal">0 ₽</span></span>
+                        </div>
+                        <button class="checkout-btn" id="checkoutBtn">Оформить заказ</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Order Form Modal -->
+        <div class="modal" id="orderModal">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h2>Оформление заказа</h2>
+                    <button class="modal-close" id="orderClose">✕</button>
+                </div>
+                <div class="modal-body">
+                    <form id="orderForm">
+                        <div class="form-group">
+                            <label for="customerName">Имя:</label>
+                            <input type="text" id="customerName" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="customerPhone">Телефон:</label>
+                            <input type="tel" id="customerPhone" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="customerAddress">Адрес:</label>
+                            <textarea id="customerAddress" required></textarea>
+                        </div>
+                        <div class="form-group">
+                            <label for="paymentMethod">Способ оплаты:</label>
+                            <select id="paymentMethod" required>
+                                <option value="card">Банковская карта</option>
+                                <option value="cash">Наличные при получении</option>
+                            </select>
+                        </div>
+                        <button type="submit" class="submit-order-btn">Подтвердить заказ</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
